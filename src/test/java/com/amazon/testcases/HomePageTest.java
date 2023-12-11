@@ -89,7 +89,7 @@ public class HomePageTest extends TestBase {
 	
 	
 	@Test (priority =3) 
-	public void location1Test(){
+	public void location1Test() throws InterruptedException{
     	test = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName());
 		boolean flag= homepage.verifyloc1();
 		Assert.assertTrue(flag);

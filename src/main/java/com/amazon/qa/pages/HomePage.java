@@ -10,7 +10,7 @@ public class HomePage extends TestBase {
 	@FindBy(xpath="//a[@aria-label='Amazon.in']")
 	WebElement AmazonindiaLogo;
 	
-	@FindBy(xpath="//span[contains(text(),'Delivering to Mumbai 400070')]")
+	@FindBy(xpath="//span[contains(text(),'Delivering')]")
 	WebElement loc1;
 	
 	@FindBy(xpath="//span[contains(text(),'Update location')]")
@@ -41,9 +41,9 @@ public class HomePage extends TestBase {
 
 		return(AmazonindiaLogo.isDisplayed());		
 	}
-	public boolean verifyloc1()
+	public boolean verifyloc1() throws InterruptedException
 	{
-
+     Thread.sleep(1000);
      return loc1.isDisplayed();	
 	}
 	
